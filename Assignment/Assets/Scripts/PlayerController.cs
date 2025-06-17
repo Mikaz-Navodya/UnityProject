@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
      //   transform.position = transform.position + horizontal * Time.deltaTime;
     }
 
+
+    //Jump
     private void Jump()
     {
         body.linearVelocity = new Vector2(body.linearVelocityX, speed);
@@ -55,5 +57,11 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+
+    //Getting Player Transform
+    public Vector3 getTransformScale()
+    {
+        return transform.localScale;
     }
 }

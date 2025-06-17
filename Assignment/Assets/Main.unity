@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 526744335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.18, y: 1.18, z: 0}
+  m_LocalPosition: {x: 7.86, y: 4.85, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -610,9 +610,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshairs: {fileID: 526744335}
-  player: {fileID: 165526920}
+  Weapon: {fileID: 165526920}
   bulletPrefab: {fileID: 1034228803919761304, guid: 1e4692d962e815b4eae5a7783f959c97, type: 3}
   bulletStart: {fileID: 546939728}
+  Player: {fileID: 2028906631}
   bulletSpeed: 60
 --- !u!1 &2028906630
 GameObject:
