@@ -28,17 +28,26 @@ public class PointAndShoot : MonoBehaviour
         {
             
             Vector3 PlayerScale = Player.getTransformScale();
-            
-            if (target[0] < -3.33 && PlayerScale[0] > 0) {
-                Player.transform.localScale = new Vector3(-0.3f, 0.3f, 1);
-                Debug.Log("Hello"); }
-            else if (target[0] > -3.33 && PlayerScale[0] < 0) {
-                Player.transform.localScale = new Vector3(0.3f, 0.3f, 1);
-                Debug.Log("Hi"); }
-                Vector3 difference = target - Weapon.transform.position;
+            Vector3 difference = target - Weapon.transform.position;
             float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            if (PlayerScale[0] > 0) { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); }
-            else { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ+180); }
+            if (difference[0] < -3.33 && PlayerScale[0] > 0) {
+                Player.transform.localScale = new Vector3(-0.3f, 0.3f, 1);
+             //   if (PlayerScale[0] > 0) { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); Debug.Log("Shoot one"); }
+             //   else { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + 180); Debug.Log("Shoot two"); }
+                Debug.Log("Hello"); }
+            else if (difference[0] > -3.33 && PlayerScale[0] < 0) {
+                Player.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+             //   if (PlayerScale[0] > 0) { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); Debug.Log("Shoot one"); }
+             //   else { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + 180); Debug.Log("Shoot two"); }
+                Debug.Log("Hi"); }
+            else
+            {
+                if (PlayerScale[0] > 0) { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); Debug.Log("Shoot one"); }
+                else { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + 180); Debug.Log("Shoot two"); }
+            }
+
+
+
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1_terrorist_1_Jump_000_0: 3846584011939912663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
