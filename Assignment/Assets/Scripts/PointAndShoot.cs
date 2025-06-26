@@ -30,15 +30,15 @@ public class PointAndShoot : MonoBehaviour
             Vector3 PlayerScale = Player.getTransformScale();
             Vector3 difference = target - Weapon.transform.position;
             float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            Debug.Log(difference);
+            Debug.Log(PlayerScale);
             if (difference[0] < -3.33 && PlayerScale[0] > 0) {
                 Player.transform.localScale = new Vector3(-0.3f, 0.3f, 1);
-             //   if (PlayerScale[0] > 0) { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); Debug.Log("Shoot one"); }
-             //   else { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + 180); Debug.Log("Shoot two"); }
+
                 Debug.Log("Hello"); }
             else if (difference[0] > -3.33 && PlayerScale[0] < 0) {
                 Player.transform.localScale = new Vector3(0.3f, 0.3f, 1);
-             //   if (PlayerScale[0] > 0) { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); Debug.Log("Shoot one"); }
-             //   else { Weapon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + 180); Debug.Log("Shoot two"); }
+
                 Debug.Log("Hi"); }
             else
             {
